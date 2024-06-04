@@ -13,6 +13,7 @@ public class ProdutoView extends JFrame {
     private JButton editarButton; // Botão para editar produto
     private JButton excluirButton; // Botão para excluir produto
 
+
     public ProdutoView(ProdutoController controller) {
         this.controller = controller;
         setTitle("Cadastro de Produtos");
@@ -49,6 +50,10 @@ public class ProdutoView extends JFrame {
 
         editarButton = new JButton("Editar");
         editarButton.setEnabled(false);
+
+         JButton butdoLike = new JButton("botao do like");
+         butdoLike.setEnabled(true);
+
         editarButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -72,12 +77,14 @@ public class ProdutoView extends JFrame {
         buttonPanel.add(editarButton);
         buttonPanel.add(excluirButton);
 
+
         // Define o layout da janela principal
         setLayout(new BorderLayout());
         // Adiciona a tabela ao centro e os botões ao sul da janela
         add(new JScrollPane(produtoTable), BorderLayout.CENTER);
         add(buttonPanel, BorderLayout.SOUTH);
     }
+
 
     private void adicionarProduto() {
         // Cria um novo produto com valores padrão

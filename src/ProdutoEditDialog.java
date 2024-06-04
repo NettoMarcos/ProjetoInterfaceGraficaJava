@@ -15,7 +15,7 @@ public class ProdutoEditDialog extends JDialog {
     private Produto produto;
 
     public ProdutoEditDialog(Frame parent, Produto produto) {
-        super(parent, "Editar Produto", true);
+        super(parent, "Produto", true);
         this.produto = produto;
 
         initComponents();
